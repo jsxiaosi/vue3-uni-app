@@ -29,7 +29,14 @@
     "build:mp-weixin": "uni build -p mp-weixin",
     "build:quickapp-webview": "uni build -p quickapp-webview",
     "build:quickapp-webview-huawei": "uni build -p quickapp-webview-huawei",
-    "build:quickapp-webview-union": "uni build -p quickapp-webview-union"
+    "build:quickapp-webview-union": "uni build -p quickapp-webview-union",
+    "lint:eslint": "eslint \"src/**/*.{vue,ts,js,tsx,jsx}\" --fix",
+    "lint:prettier": "prettier --write --loglevel warn \"src/**/*.{js,json,css,scss,vue,ts,tsx,jsx,html,md}\"",
+    "lint:stylelint": "stylelint --fix \"src/**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
+    "lint:pretty": "pretty-quick --staged",
+    "lint:staged": "lint-staged",
+    "prepare": "husky install",
+    "commit": "git-cz"
   },
   "dependencies": {
     "@dcloudio/uni-app": "^3.0.0-alpha-3050320220727002",
@@ -49,12 +56,65 @@
     "vuex": "^4.0.2"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
     "@dcloudio/types": "^3.0.13",
     "@dcloudio/uni-automator": "^3.0.0-alpha-3050320220727002",
     "@dcloudio/uni-cli-shared": "^3.0.0-alpha-3050320220727002",
     "@dcloudio/uni-stacktracey": "^3.0.0-alpha-3050320220727002",
     "@dcloudio/vite-plugin-uni": "^3.0.0-alpha-3050320220727002",
+    "@typescript-eslint/eslint-plugin": "^5.32.0",
+    "@typescript-eslint/parser": "^5.32.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^6.9.1",
+    "eslint": "^8.21.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-nuxt": "^3.2.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.3.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.3",
+    "postcss-html": "^1.5.0",
+    "prettier": "^2.7.1",
+    "pretty-quick": "^3.1.3",
+    "stylelint": "^14.9.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^26.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-scss": "^4.3.0",
     "typescript": "^4.7.4",
     "vite": "^2.9.14"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": ".cz-config.js"
+    }
+  },
+  "lint-staged": {
+    "˜{src,mock,build}/**/*.{ts,js,tsx,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "{!(package)*.json,*.code-snippets,.!(browserslist)*rc}": [
+      "prettier --write--parser json"
+    ],
+    "package.json": [
+      "prettier --write"
+    ],
+    "*.vue": [
+      "eslint --fix",
+      "prettier --write",
+      "stylelint --fix"
+    ],
+    "*.{scss,less,styl,html}": [
+      "stylelint --fix",
+      "prettier --write"
+    ],
+    "*.md": [
+      "prettier --write"
+    ]
   }
 }
