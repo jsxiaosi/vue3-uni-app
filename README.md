@@ -44,7 +44,29 @@ npm run build:h5
 npm run build:mp-weixin
 ```
 
-### 规范相关
+## 更新UniApp
+
+- 更新到最新正式版
+``` bash
+npx @dcloudio/uvm
+```
+
+- 更新到最新 alpha 版
+``` bash
+npx @dcloudio/uvm alpha
+```
+
+- 更新到正式版指定版本
+``` bash
+npx @dcloudio/uvm 3.2.12.20211029
+```
+
+- 更新到 alpha 版指定版本
+``` bash
+npx @dcloudio/uvm 3.2.14.20211112-alpha
+```
+
+## 规范相关
 
 - [esLint](https://eslint.org/) - js 语法检测
 - [styleLint](https://stylelint.io/) - 样式语法检测
