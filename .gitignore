@@ -5,6 +5,7 @@ src/.hbuilderx
 
 node_modules/
 unpackage/
+dist/
 
 package-lock.json
 yarn.lock
