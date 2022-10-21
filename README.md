@@ -111,6 +111,53 @@ npx @dcloudio/uvm 3.2.14.20211112-alpha
   - `wip` 正在开发中
   - `types` 类型定义文件修改
 
+## &常见问题
+
+### 1、在HBuilder中运行脚手架项目
+
+在HBuilder中运行脚手架项目需要在HBuilder的cli安装依赖`npm install` / `yarn install`。如果项目要运行到App端，那么建议你再HBuilder中运行脚手架项目
+
+### 2、运行时报错：You installed esbuild on another platform than the one you're currently using
+
+``` bash
+You installed esbuild on another platform than the one you're currently using.
+00:23:04.503 This won't work because esbuild is written with native code and needs to
+00:23:04.504 install a platform-specific binary executable.
+00:23:04.519 Specifically the "esbuild-darwin-arm64" package is present but this platform
+00:23:04.519 needs the "esbuild-darwin-64" package instead. People often get into this
+00:23:04.535 situation by installing esbuild on Windows or macOS and copying "node_modules"
+00:23:04.551 into a Docker image that runs Linux, or by copying "node_modules" between
+00:23:04.552 Windows and WSL environments.
+00:23:04.568 If you are installing with npm, you can try not copying the "node_modules"
+00:23:04.585 directory when you copy the files over, and running "npm ci" or "npm install"
+00:23:04.601 on the destination platform after the copy. Or you could consider using yarn
+00:23:04.602 instead which has built-in support for installing a package on multiple
+00:23:04.619 platforms simultaneously.
+00:23:04.635 If you are installing with yarn, you can try listing both this platform and the
+00:23:04.652 other platform in your ".yarnrc.yml" file using the "supportedArchitectures"
+00:23:04.653 feature: https://yarnpkg.com/configuration/yarnrc/#supportedArchitectures
+00:23:04.669 Keep in mind that this means multiple copies of esbuild will be present.
+00:23:04.669 Another alternative is to use the "esbuild-wasm" package instead, which works
+00:23:04.685 the same way on all platforms. But it comes with a heavy performance cost and
+00:23:04.685 can sometimes be 10x slower than the "esbuild" package, so you may also not
+```
+
+造成这种原因是因为你的依赖是从外部的终端安装的，解决办法就是在HBuilder中使用`npm install` / `yarn install`重新安装依赖
+
+### 3、使用pnpm 安装依赖在HBuilder中运行项目会报错
+
+在HBuilder中使用pnpm安装依赖会产生一些位置报错，目前还没找到解决办法，所以在HBuilder中使用还是用`npm install` / `yarn install`安装依赖。如果项目部需要运行到App端那么可以剥离在HBuilder中运行项目
+
+### 4、运行项目报错：fs_1.default.rmSync is not a function
+
+手动删除运行打包文件夹`dist`或者在运行命令前添加上`npm run clean`
+
+``` bash
+"dev:mp-weixin": "npm run clean && uni -p mp-weixin"
+```
+
+[原文链接](https://ask.dcloud.net.cn/question/154572)
+
 ## 维护者
 
 [@jsxiaosi](https://github.com/jsxiaosi)
