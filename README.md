@@ -24,11 +24,15 @@ npm install --registry=https://registry.npm.taobao.org
 ```
 
 ### 运行
+
 - H5
+
 ```bash
 npm run dev:h5
 ```
+
 - 微信小程序
+
 ```bash
 npm run dev:mp-weixin
 ```
@@ -36,10 +40,13 @@ npm run dev:mp-weixin
 ### 打包
 
 - H5
+
 ```bash
 npm run build:h5
 ```
+
 - 微信小程序
+
 ```bash
 npm run build:mp-weixin
 ```
@@ -47,21 +54,25 @@ npm run build:mp-weixin
 ## 更新UniApp
 
 - 更新到最新正式版
+
 ``` bash
 npx @dcloudio/uvm
 ```
 
 - 更新到最新 alpha 版
+
 ``` bash
 npx @dcloudio/uvm alpha
 ```
 
 - 更新到正式版指定版本
+
 ``` bash
 npx @dcloudio/uvm 3.2.12.20211029
 ```
 
 - 更新到 alpha 版指定版本
+
 ``` bash
 npx @dcloudio/uvm 3.2.14.20211112-alpha
 ```
@@ -86,14 +97,19 @@ npx @dcloudio/uvm 3.2.14.20211112-alpha
 
 - 参考 [vue](https://github.com/vuejs/vue/blob/dev/.github/COMMIT_CONVENTION.md) 规范
 
-  - `feature` 增加新功能
-  - `fixbug` 修复问题/BUG
-  - `style` 不影响程序逻辑的代码修改(修改空白字符，格式缩进，补全缺失的分号等，没有改变代码逻辑)
-  - `perf` 优化/性能提升
-  - `refactor` 重构
-  - `revert` 撤销修改
-  - `docs` 文档/注释
-  - `chore` 依赖更新/脚手架配置修改等
+  - `feat` 新增功能
+  - `fix` 修复缺陷
+  - `docs` 文档变更
+  - `style` 代码格式
+  - `refactor` 代码重构
+  - `perf` 性能优化
+  - `test` 添加疏漏测试或已有测试改动
+  - `build` 构建流程、外部依赖变更 (如升级 npm 包、修改打包配置等)
+  - `ci` 修改 CI 配置、脚本
+  - `revert` 回滚 commit
+  - `chore` 对构建过程或辅助工具和库的更改 (不影响源文件)
+  - `wip` 正在开发中
+  - `types` 类型定义文件修改
 
 ## 维护者
 
