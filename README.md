@@ -10,6 +10,12 @@ git clone https://github.com/jsxiaosi/vue3-uni_app.git
 git clone git@github.com:jsxiaosi/vue3-uni_app.git
 ```
 
+或者通过[`xs-cli`](https://github.com/jsxiaosi/xs-cli)快速创建
+
+```bash
+npx @jsxiaosi/xs-cli create [project-name]
+```
+
 - 安装依赖
 
 ```bash
