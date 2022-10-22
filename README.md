@@ -152,7 +152,7 @@ You installed esbuild on another platform than the one you're currently using.
 
 ### 3、使用pnpm 安装依赖在HBuilder中运行项目会报错
 
-在HBuilder中使用pnpm安装依赖会产生一些位置报错，目前还没找到解决办法，所以在HBuilder中使用还是用`npm install` / `yarn install`安装依赖。如果项目部需要运行到App端那么可以剥离在HBuilder中运行项目
+在HBuilder中使用pnpm安装依赖会产生一些未知报错，目前还没找到解决办法，所以在HBuilder中使用还是用`npm install` / `yarn install`安装依赖。如果项目不需要运行到App端那么可以剥离在HBuilder中运行项目
 
 ### 4、运行项目报错：fs_1.default.rmSync is not a function
 
@@ -163,6 +163,16 @@ You installed esbuild on another platform than the one you're currently using.
 ```
 
 [原文链接](https://ask.dcloud.net.cn/question/154572)
+
+### 5、运行报错：CACError: Unknown option `--watch`
+
+``` bash
+throw new CACError(`Unknown option \`${name.length > 1 ? `--${name}` : `-${name}`}\``);
+21:03:47.375           ^
+21:03:47.379 CACError: Unknown option `--watch`
+```
+
+造成此问题请在HBuilder中打开manifest.json，在基础设置中找到Vue版本选择，是否已经选择到Vue3编译
 
 ## 维护者
 
