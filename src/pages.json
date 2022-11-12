@@ -4,19 +4,19 @@
     {
       "path": "pages/index/index",
       "style": {
-        "navigationBarTitleText": "uni-app"
+        "navigationBarTitleText": "%app.tabBar.index%"
       }
     },
     {
       "path": "pages/pinia/index",
       "style": {
-        "navigationBarTitleText": "pinia"
+        "navigationBarTitleText": "%app.tabBar.pinia%"
       }
     },
     {
       "path": "pages/locale/index",
       "style": {
-        "navigationBarTitleText": "locale"
+        "navigationBarTitleText": "%app.tabBar.locale%"
       }
     }
   ],
@@ -25,5 +25,25 @@
     "navigationBarTitleText": "uni-app",
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#007AFF",
+    "borderStyle": "black",
+    "backgroundColor": "#F8F8F8",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "%app.tabBar.index%"
+      },
+      {
+        "pagePath": "pages/pinia/index",
+        "text": "%app.tabBar.pinia%"
+      },
+      {
+        "pagePath": "pages/locale/index",
+        "text": "%app.tabBar.locale%"
+      }
+    ]
   }
 }

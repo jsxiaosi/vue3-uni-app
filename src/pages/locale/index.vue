@@ -13,9 +13,9 @@
   <div class="content">
     <button class="page-button" @click="onLocaleChange('zh-Hans')">中文</button>
 
-    <button class="page-button" @click="onLocaleChange('ja')">日文</button>
+    <button class="page-button" @click="onLocaleChange('ja')">日本語</button>
 
-    <button class="page-button" @click="onLocaleChange('en')">英文</button>
+    <button class="page-button" @click="onLocaleChange('en')">English</button>
   </div>
 </template>
 

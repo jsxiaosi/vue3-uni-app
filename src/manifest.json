@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "%app.name%",
   "appid": "",
   "description": "",
   "versionName": "1.0.0",
@@ -68,5 +68,6 @@
   "uniStatistics": {
     "enable": false
   },
-  "vueVersion": "3"
+  "vueVersion": "3",
+  "locale": "auto"
 }

@@ -12,10 +12,9 @@ Object.keys(config).forEach((key) => {
 
 const i18n = createI18n({
   locale: uni.getLocale(),
-  fallbackLocale: uni.getLocale(),
   legacy: false,
   globalInjection: true,
-  messages,
+  messages: messages,
 });
 
 export default i18n;

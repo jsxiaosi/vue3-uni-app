@@ -1,8 +1,4 @@
-<script setup lang="ts">
-  const toPage = (url: string) => {
-    uni.navigateTo({ url });
-  };
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <view class="content">
@@ -10,10 +6,6 @@
     <view class="text-area">
       <text class="title">{{ $t('page.index') }}</text>
     </view>
-
-    <button class="page-button" @click="toPage('/pages/pinia/index')">pinia</button>
-
-    <button class="page-button" @click="toPage('/pages/locale/index')">locale</button>
   </view>
 </template>
 
@@ -39,12 +31,5 @@
   .title {
     font-size: 36rpx;
     color: #8f8f94;
-  }
-
-  .page-button {
-    margin-top: 36rpx;
-    width: 500rpx;
-    height: 80rpx;
-    line-height: 80rpx;
   }
 </style>
