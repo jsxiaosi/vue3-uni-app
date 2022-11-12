@@ -1,6 +1,7 @@
 {
   "app.name": "vue-xs-uni-app",
-  "app.tabBar.index": "Home",
-  "app.tabBar.locale": "Locales",
-  "app.tabBar.pinia": "Pinia"
+  "pages.index": "Home",
+  "pages.locale": "Locales",
+  "pages.pinia": "Pinia",
+  "pages.nvue": "Nvue Page"
 }

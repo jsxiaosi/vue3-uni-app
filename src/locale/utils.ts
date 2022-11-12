@@ -10,14 +10,13 @@ export const defaultFilePath = (config: Recordable) => {
     const name: RegExpMatchArray = key.match(/^\.\/([\s\S]+)\/([\s\S]+)\.ts$/) || [];
     const valueName = name[2];
     const value = config[key].default || {};
-    if (name[2] === 'app') {
-      messages = { ...messages, ...flat(value, name[2]) };
-    } else messages[valueName] = value;
+    messages = { ...messages, ...flat(value, valueName) };
   });
 
   return messages;
 };
 
+// 要把多级对象转换成平级，nuve不支持多层对象引用翻译
 function flat(object: Recordable, prefix: string) {
   let res: Recordable = {};
   Object.entries(object).forEach((item) => {

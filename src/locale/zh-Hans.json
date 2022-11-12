@@ -1,6 +1,7 @@
 {
   "app.name": "vue-xs-uni-app",
-  "app.tabBar.index": "首页",
-  "app.tabBar.locale": "国际化",
-  "app.tabBar.pinia": "Pinia"
+  "pages.index": "首页",
+  "pages.locale": "国际化",
+  "pages.pinia": "Pinia",
+  "pages.nvue": "Nvue页面"
 }

@@ -2,6 +2,7 @@
 *.md
 *.woff
 *.ttf
+*.nvue
 *html
 
 dist

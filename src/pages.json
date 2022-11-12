@@ -4,19 +4,25 @@
     {
       "path": "pages/index/index",
       "style": {
-        "navigationBarTitleText": "%app.tabBar.index%"
+        "navigationBarTitleText": "%pages.index%"
       }
     },
     {
       "path": "pages/pinia/index",
       "style": {
-        "navigationBarTitleText": "%app.tabBar.pinia%"
+        "navigationBarTitleText": "%pages.pinia%"
       }
     },
     {
       "path": "pages/locale/index",
       "style": {
-        "navigationBarTitleText": "%app.tabBar.locale%"
+        "navigationBarTitleText": "%pages.locale%"
+      }
+    },
+    {
+      "path": "pages/nvue/index",
+      "style": {
+        "navigationBarTitleText": "%pages.nvue%"
       }
     }
   ],
@@ -34,15 +40,19 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "%app.tabBar.index%"
+        "text": "%pages.index%"
       },
       {
         "pagePath": "pages/pinia/index",
-        "text": "%app.tabBar.pinia%"
+        "text": "%pages.pinia%"
       },
       {
         "pagePath": "pages/locale/index",
-        "text": "%app.tabBar.locale%"
+        "text": "%pages.locale%"
+      },
+      {
+        "pagePath": "pages/nvue/index",
+        "text": "%pages.nvue%"
       }
     ]
   }
