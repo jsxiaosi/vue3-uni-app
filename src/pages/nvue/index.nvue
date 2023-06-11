@@ -1,9 +1,9 @@
 <script setup lang="ts">
-  import { initVueI18n } from '@dcloudio/uni-i18n';
+import { initVueI18n } from '@dcloudio/uni-i18n';
 
-  import { messages } from '@/locale';
+import { messages } from '@/locale';
 
-  const { t } = initVueI18n(messages);
+const { t } = initVueI18n(uni.getLocale(), messages);
 
 </script>
 
@@ -17,26 +17,26 @@
 </template>
 
 <style lang="scss" scoped>
-  .content {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+.content {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-  .logo {
-    height: 200rpx;
-    width: 200rpx;
-    margin-top: 200rpx;
-    margin-bottom: 50rpx;
-  }
+.logo {
+  height: 200rpx;
+  width: 200rpx;
+  margin-top: 200rpx;
+  margin-bottom: 50rpx;
+}
 
-  .text-area {
-    display: flex;
-    justify-content: center;
-  }
+.text-area {
+  display: flex;
+  justify-content: center;
+}
 
-  .title {
-    font-size: 36rpx;
-    color: #8f8f94;
-  }
+.title {
+  font-size: 36rpx;
+  color: #8f8f94;
+}
 </style>

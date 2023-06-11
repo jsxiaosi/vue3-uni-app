@@ -174,6 +174,21 @@ throw new CACError(`Unknown option \`${name.length > 1 ? `--${name}` : `-${name}
 
 造成此问题请在HBuilder中打开manifest.json，在基础设置中找到Vue版本选择，是否已经选择到Vue3编译
 
+### 6、运行带有nvue项目报错：No matching export in "dist/dev/.nvue/--/--/--/.js" for import "default"
+
+``` bash
+X [ERROR] No matching export in "dist/dev/.nvue/pages/index/index.js" for import "default"  
+
+    <stdin>:1:7:  
+      1 │ import App from './pages/index/index.js'  
+        ╵        ~~~  
+
+[plugin:uni:app-nvue-esbuild] Build failed with 1 error:  
+<stdin>:1:7: ERROR: No matching export in "dist/dev/.nvue/pages/index/index.js" for import "default"  
+```
+
+出现这种问题请暂时先把vite版本控制在3.2.4先不要升级到vite4.*，后续官方解决之后我在update
+
 ## 维护者
 
 [@jsxiaosi](https://github.com/jsxiaosi)
