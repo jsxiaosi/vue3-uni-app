@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "uni-helper.uni-app-schemas-vscode",
+    "uni-helper.uni-app-snippets-vscode",
+    "vue.volar",
+    "vue.vscode-typescript-vue-plugin",
+    "syler.sass-indented",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "lokalise.i18n-ally"
+  ]
+}
