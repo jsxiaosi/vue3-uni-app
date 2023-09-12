@@ -4,12 +4,12 @@
   <view class="content">
     <image class="logo" src="/static/logo.png" />
     <view class="text-area">
-      <text class="title">{{ $t('page.index') }}</text>
+      <text class="title">{{ $t('pages.index') }}</text>
     </view>
   </view>
 </template>
 
-<style>
+<style scoped lang="scss">
   .content {
     display: flex;
     flex-direction: column;

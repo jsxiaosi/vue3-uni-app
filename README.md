@@ -189,6 +189,10 @@ X [ERROR] No matching export in "dist/dev/.nvue/pages/index/index.js" for import
 
 出现这种问题请暂时先把vite版本控制在3.2.4先不要升级到vite4.*，后续官方解决之后我在update
 
+## issues
+
+如果使用模版出现问题请到 `github` 提交 `issues` 或者发送邮箱 `1531733886@qq.com`
+
 ## 维护者
 
 [@jsxiaosi](https://github.com/jsxiaosi)

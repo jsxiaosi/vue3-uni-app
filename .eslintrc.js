@@ -13,7 +13,7 @@ module.exports = {
       },
     },
   ],
-  extends: ['@jsxiaosi/eslint-config-vue', 'plugin:prettier/recommended'],
+  extends: ['@jsxiaosi/eslint-config-uni-app', 'plugin:prettier/recommended'],
   rules: {
     'prettier/prettier': 'error',
   },
